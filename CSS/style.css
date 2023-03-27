@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root{
+    --color-light-50: aliceblue;
+    --color-light-100: rgb(181, 188, 193);
+
+    --color-dark-900: black;
+
+    --color-purple-50: #702999;
+    --color-purple-100:#2b0044;
+
+    --color-gradient: 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: aliceblue;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+}
+
+#cards{
+    display: flex;
+    flex-direction: row;
+    padding: 32px;
+}
+
+section.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem ;
+    background: white;
+    border-radius: 8px;
+    max-height: 256px;
+    margin-left: 32px;
+}
+
+section.card:first-child{
+    margin-left: 0;
+}
+
+main#cards section.card .icon{
+    width: 64px;
+    height: 64px;
+}
+
+main#cards section.card img{
+    width: 100%;
+}
+
+section.card h3{
+    margin: 16px 0;
+    font-size: 100%;
+}
+
+section.card span{
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+
+section.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+main#cards section.card.contact button{
+    background: linear-gradient(74deg, rgba(159,102,255,1) 50%, rgba(223,200,255,1) 100%);
+}
+
+main#cards section.card.bag button{
+    background: linear-gradient(74deg, rgba(62,138,255,1) 50%, rgba(187,222,255,1) 100%);
+}
+
+main#cards section.card.play button{
+    background: linear-gradient(74deg, rgba(254,95,143,1) 50%, rgba(255,199,217,1) 100%);
+}
+
+main#cards section.card.contact{
+    box-shadow: 20px 20px 50px -30px #dbc4ff;
+}
+
+main#cards section.card.bag{
+    box-shadow: 20px 20px 50px -30px #afd6ff;
+}
+
+main#cards section.card.play{
+    box-shadow: 20px 20px 50px -30px #ffc1d5;
+}
+
+/* responsibidade */
+
+@media screen and (max-width: 720px){
+    main#cards{
+        flex-direction: column;
+    }
+    section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    section.card:last-child{
+        margin-bottom: 0;
+    }
+
+    section.card button{
+        font-size: 70%;
+    }
+}
